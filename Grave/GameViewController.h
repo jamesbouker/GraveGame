@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
+#import "MenuViewController.h"
 
-@interface ViewController : UIViewController {
+@interface GameViewController : UIViewController {
     NSMutableArray *walkAnim, *fallAnim, *jumpAnim;
     
     NSTimer *timer;
+    BOOL skeletonMovingUp;
+    
+    int score;
 }
+
+@property (weak, nonatomic) MenuViewController *menuViewController;
+
+@property (strong, nonatomic) AVAudioPlayer *player;
 
 @property (strong, nonatomic) IBOutlet UIImageView *skeleton;
 @property (strong, nonatomic) IBOutlet UIImageView *grave;

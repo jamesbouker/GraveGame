@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FlipViewController : UIViewController
+@interface MenuViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end

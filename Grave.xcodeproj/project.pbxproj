@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B148C1DF18D23812006FAC55 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148C1DE18D23812006FAC55 /* AVFoundation.framework */; };
 		B1EB7BBA18CF9563001CC29A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB7BB918CF9563001CC29A /* Foundation.framework */; };
 		B1EB7BBC18CF9563001CC29A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB7BBB18CF9563001CC29A /* CoreGraphics.framework */; };
 		B1EB7BBE18CF9563001CC29A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB7BBD18CF9563001CC29A /* UIKit.framework */; };
@@ -14,14 +15,14 @@
 		B1EB7BC618CF9563001CC29A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7BC518CF9563001CC29A /* main.m */; };
 		B1EB7BCA18CF9563001CC29A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7BC918CF9563001CC29A /* AppDelegate.m */; };
 		B1EB7BCD18CF9563001CC29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1EB7BCB18CF9563001CC29A /* Main.storyboard */; };
-		B1EB7BD018CF9563001CC29A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7BCF18CF9563001CC29A /* ViewController.m */; };
+		B1EB7BD018CF9563001CC29A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7BCF18CF9563001CC29A /* GameViewController.m */; };
 		B1EB7BD218CF9563001CC29A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1EB7BD118CF9563001CC29A /* Images.xcassets */; };
 		B1EB7BD918CF9563001CC29A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB7BD818CF9563001CC29A /* XCTest.framework */; };
 		B1EB7BDA18CF9563001CC29A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB7BB918CF9563001CC29A /* Foundation.framework */; };
 		B1EB7BDB18CF9563001CC29A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB7BBD18CF9563001CC29A /* UIKit.framework */; };
 		B1EB7BE318CF9563001CC29A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1EB7BE118CF9563001CC29A /* InfoPlist.strings */; };
 		B1EB7BE518CF9563001CC29A /* GraveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7BE418CF9563001CC29A /* GraveTests.m */; };
-		B1EB7BF318CF9722001CC29A /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7BF218CF9722001CC29A /* FlipViewController.m */; };
+		B1EB7BF318CF9722001CC29A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB7BF218CF9722001CC29A /* MenuViewController.m */; };
 		B1EB7C0518CF98FD001CC29A /* w1.png in Resources */ = {isa = PBXBuildFile; fileRef = B1EB7BF518CF98FD001CC29A /* w1.png */; };
 		B1EB7C0618CF98FD001CC29A /* w2.png in Resources */ = {isa = PBXBuildFile; fileRef = B1EB7BF618CF98FD001CC29A /* w2.png */; };
 		B1EB7C0718CF98FD001CC29A /* w3.png in Resources */ = {isa = PBXBuildFile; fileRef = B1EB7BF718CF98FD001CC29A /* w3.png */; };
@@ -84,6 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B148C1DE18D23812006FAC55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B1EB7BB618CF9563001CC29A /* Grave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EB7BB918CF9563001CC29A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1EB7BBB18CF9563001CC29A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,16 +97,16 @@
 		B1EB7BC818CF9563001CC29A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1EB7BC918CF9563001CC29A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B1EB7BCC18CF9563001CC29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B1EB7BCE18CF9563001CC29A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B1EB7BCF18CF9563001CC29A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B1EB7BCE18CF9563001CC29A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		B1EB7BCF18CF9563001CC29A /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		B1EB7BD118CF9563001CC29A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B1EB7BD718CF9563001CC29A /* GraveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EB7BD818CF9563001CC29A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B1EB7BE018CF9563001CC29A /* GraveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GraveTests-Info.plist"; sourceTree = "<group>"; };
 		B1EB7BE218CF9563001CC29A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1EB7BE418CF9563001CC29A /* GraveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraveTests.m; sourceTree = "<group>"; };
-		B1EB7BF118CF9722001CC29A /* FlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipViewController.h; sourceTree = "<group>"; };
-		B1EB7BF218CF9722001CC29A /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipViewController.m; sourceTree = "<group>"; };
+		B1EB7BF118CF9722001CC29A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		B1EB7BF218CF9722001CC29A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		B1EB7BF518CF98FD001CC29A /* w1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w1.png; sourceTree = "<group>"; };
 		B1EB7BF618CF98FD001CC29A /* w2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w2.png; sourceTree = "<group>"; };
 		B1EB7BF718CF98FD001CC29A /* w3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w3.png; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B148C1DF18D23812006FAC55 /* AVFoundation.framework in Frameworks */,
 				B1EB7BBC18CF9563001CC29A /* CoreGraphics.framework in Frameworks */,
 				B1EB7BBE18CF9563001CC29A /* UIKit.framework in Frameworks */,
 				B1EB7BBA18CF9563001CC29A /* Foundation.framework in Frameworks */,
@@ -202,6 +205,7 @@
 		B1EB7BB818CF9563001CC29A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B148C1DE18D23812006FAC55 /* AVFoundation.framework */,
 				B1EB7BB918CF9563001CC29A /* Foundation.framework */,
 				B1EB7BBB18CF9563001CC29A /* CoreGraphics.framework */,
 				B1EB7BBD18CF9563001CC29A /* UIKit.framework */,
@@ -217,10 +221,10 @@
 				B1EB7BC818CF9563001CC29A /* AppDelegate.h */,
 				B1EB7BC918CF9563001CC29A /* AppDelegate.m */,
 				B1EB7BCB18CF9563001CC29A /* Main.storyboard */,
-				B1EB7BCE18CF9563001CC29A /* ViewController.h */,
-				B1EB7BCF18CF9563001CC29A /* ViewController.m */,
-				B1EB7BF118CF9722001CC29A /* FlipViewController.h */,
-				B1EB7BF218CF9722001CC29A /* FlipViewController.m */,
+				B1EB7BCE18CF9563001CC29A /* GameViewController.h */,
+				B1EB7BCF18CF9563001CC29A /* GameViewController.m */,
+				B1EB7BF118CF9722001CC29A /* MenuViewController.h */,
+				B1EB7BF218CF9722001CC29A /* MenuViewController.m */,
 				B1EB7BC018CF9563001CC29A /* Supporting Files */,
 			);
 			path = Grave;
@@ -482,8 +486,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1EB7BD018CF9563001CC29A /* ViewController.m in Sources */,
-				B1EB7BF318CF9722001CC29A /* FlipViewController.m in Sources */,
+				B1EB7BD018CF9563001CC29A /* GameViewController.m in Sources */,
+				B1EB7BF318CF9722001CC29A /* MenuViewController.m in Sources */,
 				B1EB7BCA18CF9563001CC29A /* AppDelegate.m in Sources */,
 				B1EB7BC618CF9563001CC29A /* main.m in Sources */,
 			);
@@ -694,6 +698,7 @@
 				B1EB7BEA18CF9563001CC29A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1EB7BEB18CF9563001CC29A /* Build configuration list for PBXNativeTarget "GraveTests" */ = {
 			isa = XCConfigurationList;
@@ -702,6 +707,7 @@
 				B1EB7BED18CF9563001CC29A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
