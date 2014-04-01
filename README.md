@@ -18,7 +18,10 @@ Implemented on Thursday March 13th:
 - Swapped and renamed view, (MenuViewController - > GameViewController)
 - Basic Score Keeping
 
-TODO:
-- Instructions
-- Player Login - and alert view
-- Display high score and specific player highscore
+Implemented by April 1st
+- Instructions and Nice looking start screen
+- Player Login - UITextFieldDelegate - and alert view
+- Score Tracking using NSUserDefaults
+- Display high scores - Table View
+- Added in new enemy type Bat
+- Added in dodge and falling animations
