@@ -7,8 +7,12 @@
 //
 
 #import "GameViewController.h"
+#import "ScoresViewController.h"
+#import "AppDelegate.h"
 
-@implementation GameViewController
+@implementation GameViewController {
+    BOOL die;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -17,41 +21,45 @@
     jumpAnim = [self loadImagesForFilename:@"j" type:@"png" count:22];
     fallAnim = [self loadImagesForFilename:@"f" type:@"png" count:9];
     
+    //loading audio
     NSString *path = [[NSBundle mainBundle] pathForResource:@"gravehop" ofType:@"aif"];
     NSURL *url = [NSURL fileURLWithPath:path];
     self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     [_player prepareToPlay];
-    
+
+    //repeat forever!
     _player.numberOfLoops = -1;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0/30.0 target:self selector:@selector(update) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0/30.0 target:self
+                                           selector:@selector(update)
+                                           userInfo:nil
+                                           repeats:YES];
     [_player play];
     [self walk];
     
-    score = 0;
+    [AppDelegate appDelegate].score = 0;
 }
+
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     [timer invalidate];
     [_player stop];
-    
-    _menuViewController.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", score];
 }
 
 -(void)update {
-    _grave.center = CGPointMake(_grave.center.x - 6, _grave.center.y);
+    _grave.center = CGPointMake(_grave.center.x - 7, _grave.center.y);
     
     if(_grave.center.x + _grave.frame.size.width/2.0 <= 0) {
         _grave.center = CGPointMake(600, _grave.center.y);
         
         //increment score
-        score++;
+        [AppDelegate appDelegate].score++;
     }
     
     if(skeletonMovingUp) {
@@ -73,8 +81,26 @@
         return;
     
     if(CGRectIntersectsRect(_button.frame, _grave.frame)) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        if(die)
+            return;        
+        die = true;
+        
+		// stop playing the theme song
+		[_player stop];
+		
+        [_skeleton setAnimationImages:fallAnim];
+        [_skeleton setAnimationDuration:1];
+		
+        [_skeleton startAnimating];
+        [NSTimer scheduledTimerWithTimeInterval:0.9 target:self selector:@selector(nextMenu) userInfo:nil repeats:NO];
+        
+
     }
+}
+
+- (void) nextMenu
+{
+    [self performSegueWithIdentifier:@"endGame" sender:self];
 }
 
 -(void)walk {
@@ -98,12 +124,12 @@
     skeletonMovingUp = YES;
     
     [UIView animateWithDuration:_skeleton.animationDuration/2.0 animations:^{
-        _skeleton.center = CGPointMake(_skeleton.center.x, _skeleton.center.y - 80);
+        _skeleton.center = CGPointMake(_skeleton.center.x, _skeleton.center.y - 160);
     } completion:^(BOOL finished) {
         
         skeletonMovingUp = NO;
         [UIView animateWithDuration:_skeleton.animationDuration/2.0 animations:^{
-            _skeleton.center = CGPointMake(_skeleton.center.x, _skeleton.center.y + 80);
+            _skeleton.center = CGPointMake(_skeleton.center.x, _skeleton.center.y + 160);
         } completion:^(BOOL finished) {
             //_button.center = CGPointMake(_button.center.x, _button.center.y + 120);
         }];
@@ -120,7 +146,7 @@
     [_skeleton stopAnimating];
     
     _skeleton.animationImages = fallAnim;
-    _skeleton.animationDuration = 2.0;
+    _skeleton.animationDuration = 1.0;
     _skeleton.animationRepeatCount = 1;
     [_skeleton startAnimating];
 }
@@ -138,5 +164,29 @@
 - (IBAction)buttonHit:(id)sender {
     [self jump];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

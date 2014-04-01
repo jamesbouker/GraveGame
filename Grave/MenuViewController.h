@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuViewController : UIViewController
+@interface MenuViewController : UIViewController <UITextFieldDelegate> //MenuViewController conforms to UITextField delegate
+                                                                       //allows return key to dismiss keyboard
 
-@property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end

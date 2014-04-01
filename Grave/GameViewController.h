@@ -15,8 +15,6 @@
     
     NSTimer *timer;
     BOOL skeletonMovingUp;
-    
-    int score;
 }
 
 @property (weak, nonatomic) MenuViewController *menuViewController;
